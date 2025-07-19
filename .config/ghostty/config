@@ -8,6 +8,7 @@ scrollback-limit = 1000000
 
 macos-non-native-fullscreen = true
 # macos-titlebar-style = transparent
+macos-titlebar-style = hidden
 
 theme = tokyonight_moon
 # theme = catpuccin
@@ -25,7 +26,6 @@ background-blur = true
 
 #window-save-state = always
 
-macos-titlebar-style = hidden
 
 quit-after-last-window-closed = true
 quick-terminal-animation-duration = 1
