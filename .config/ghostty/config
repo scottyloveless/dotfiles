@@ -1,5 +1,5 @@
 font-size = 16
-# font-thicken = true
+font-thicken = true
 
 clipboard-trim-trailing-spaces = true
 
@@ -31,5 +31,5 @@ quit-after-last-window-closed = true
 quick-terminal-animation-duration = 1
 window-padding-x = 4
 window-padding-y = 4
-window-padding-balance = true
+#window-padding-balance = true
 confirm-close-surface = false

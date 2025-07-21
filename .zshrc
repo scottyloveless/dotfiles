@@ -220,4 +220,8 @@ export PSQL_DIR=/opt/homebrew/Cellar/postgresql@15/15.13/bin
 export PATH="$PSQL_DIR:$PATH"
 
 # ~/.zshrc
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+fi
