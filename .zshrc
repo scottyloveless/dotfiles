@@ -90,7 +90,7 @@ export PATH="$PSQL_DIR:$PATH"
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
   --info=inline-right \
-  --border=none \
+  --border=rounded \
   --color=border:#589ed7 \
   --color=fg:#c8d3f5 \
   --color=gutter:#1e2030 \
