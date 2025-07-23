@@ -25,7 +25,8 @@ macos-titlebar-style = transparent
 # macos-titlebar-style = hidden
 
 # ---- theme ---- #
-theme = tokyonight_moon
+#theme = tokyonight_moon
+theme = "/Users/mox/.config/ghostty/themes/tokyonight_moon.conf"
 # theme = cappuccino
 
 # ---- background ----- #
