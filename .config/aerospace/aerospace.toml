@@ -238,3 +238,15 @@ run = "move-node-to-workspace S"
 [[on-window-detected]]
 if.app-id = 'com.apple.ActivityMonitor'
 run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome.app.lodlkdfmihgonocnmddehnfgiljnadcf'
+run = "move-node-to-workspace X"
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome.app.hjlhbeffadgkonmpnblkfmhckmocohah'
+run = "move-node-to-workspace V"
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome.app.agimnkijcaahngcdmfeangaknmldooml'
+run = "move-node-to-workspace V"
