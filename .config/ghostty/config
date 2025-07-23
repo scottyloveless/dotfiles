@@ -1,3 +1,16 @@
+# ---- shell ---- #
+shell-integration = zsh
+mouse-hide-while-typing = true
+scrollback-limit = 1000000
+
+# --- cursor ---- #
+cursor-style = block
+shell-integration-features = no-cursor
+
+# ---- splits ---- #
+unfocused-split-opacity = 0.9
+
+# ---- font ---- #
 font-size = 16
 font-thicken = true
 
@@ -6,25 +19,29 @@ clipboard-trim-trailing-spaces = true
 mouse-hide-while-typing = true
 scrollback-limit = 1000000
 
-macos-non-native-fullscreen = true
-# macos-titlebar-style = transparent
-macos-titlebar-style = hidden
+# ---- macOS ---- #
+macos-non-native-fullscreen = false
+macos-titlebar-style = transparent
+# macos-titlebar-style = hidden
 
+# ---- theme ---- #
 theme = tokyonight_moon
-# theme = catpuccin
+# theme = cappuccino
 
+# ---- background ----- #
 background-opacity = 0.8
 background-blur = true
-# background = 000000
+# background = 222222
 # background = 000126
-# background = 011423
+background = 011423
 # background = 00010f
 # background = 0B1215
 # background = 101720
 # background = 011222
 # background = 020D19
 
-#window-save-state = always
+
+window-save-state = always
 
 
 quit-after-last-window-closed = true
