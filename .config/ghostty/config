@@ -1,7 +1,7 @@
 # ---- shell ---- #
 shell-integration = zsh
 mouse-hide-while-typing = true
-scrollback-limit = 1000000
+scrollback-limit = 10000
 
 # --- cursor ---- #
 cursor-style = block
@@ -12,7 +12,12 @@ unfocused-split-opacity = 0.9
 
 # ---- font ---- #
 font-size = 16
-font-thicken = true
+#font-thicken = true
+font-family = IosevkaTerm Nerd Font Mono
+font-style = Medium
+font-style-bold = Bold
+font-style-italic = Italic
+font-style-bold-italic = Bold Italic
 
 clipboard-trim-trailing-spaces = true
 
@@ -21,25 +26,25 @@ scrollback-limit = 1000000
 
 # ---- macOS ---- #
 macos-non-native-fullscreen = false
-macos-titlebar-style = transparent
-# macos-titlebar-style = hidden
+# macos-titlebar-style = transparent
+macos-titlebar-style = hidden
 
 # ---- theme ---- #
 #theme = tokyonight_moon
 theme = "/Users/mox/.config/ghostty/themes/tokyonight_moon.conf"
-# theme = cappuccino
 
 # ---- background ----- #
-background-opacity = 0.8
+background-opacity = 0.98
 background-blur = true
 # background = 222222
 # background = 000126
-background = 011423
+# background = 011423
 # background = 00010f
 # background = 0B1215
 # background = 101720
 # background = 011222
 # background = 020D19
+background = 1a1b26
 
 
 window-save-state = always
@@ -47,7 +52,7 @@ window-save-state = always
 
 quit-after-last-window-closed = true
 quick-terminal-animation-duration = 1
-window-padding-x = 4
-window-padding-y = 4
+window-padding-x = 14
+window-padding-y = 14
 #window-padding-balance = true
 confirm-close-surface = false
