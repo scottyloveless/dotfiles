@@ -34,7 +34,7 @@ macos-titlebar-style = hidden
 theme = "/Users/mox/.config/ghostty/themes/tokyonight_moon.conf"
 
 # ---- background ----- #
-background-opacity = 0.98
+background-opacity = 0.95
 background-blur = true
 # background = 222222
 # background = 000126

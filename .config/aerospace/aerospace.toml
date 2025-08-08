@@ -12,7 +12,14 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = ['exec-and-forget sketchybar']
+
+# Notify Sketchybar about workspace change
+exec-on-workspace-change = [
+    '/bin/bash',
+    '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -56,13 +63,15 @@ inner.horizontal = 14
 inner.vertical = 14
 outer.left = 14
 outer.bottom = 14
-outer.top = 14
+outer.top = 18
 outer.right = 14
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
 [mode.main.binding]
+cmd-h = []     # Disable "hide application"
+cmd-alt-h = [] # Disable "hide others"
 
 # All possible keys:
 # - Letters.        a, b, c, ..., z
@@ -109,27 +118,27 @@ alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
-alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
-alt-b = 'workspace B'
-alt-c = 'workspace C'
-alt-d = 'workspace D'
-alt-e = 'workspace E'
-alt-g = 'workspace G'
-alt-i = 'workspace I'
-alt-m = 'workspace M'
-alt-n = 'workspace N'
-alt-o = 'workspace O'
-alt-p = 'workspace P'
-alt-q = 'workspace Q'
-alt-r = 'workspace R'
-alt-s = 'workspace S'
-alt-t = 'workspace T'
-alt-u = 'workspace U'
-alt-v = 'workspace V'
-alt-w = 'workspace W'
-alt-x = 'workspace X'
-alt-y = 'workspace Y'
-alt-z = 'workspace Z'
+# alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+# alt-b = 'workspace B'
+# alt-c = 'workspace C'
+# altrd = 'workspace D'
+# alt-e = 'workspace E'
+# alt-g = 'workspacewG'
+# alt-i = 'workspace I'
+# alt-m = 'workspace M'
+# alt-n = 'workspace N'
+# alt-o = 'workspace O'
+# alt-p = 'workspace P'
+# alt-q = 'workspace Q'
+# alt-r = 'workspace R'
+# alt-s = 'workspace S'
+# alt-t = 'workspace T'
+# alt-u = 'workspace U'
+# alt-v = 'workspace V'
+# alt-w = 'workspace W'
+# alt-x = 'workspace X'
+# alt-y = 'workspace Y'
+# alt-z = 'workspace Z'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -137,28 +146,28 @@ alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-a = 'move-node-to-workspace A'
-alt-shift-b = 'move-node-to-workspace B'
-alt-shift-c = 'move-node-to-workspace C'
-alt-shift-d = 'move-node-to-workspace D'
-alt-shift-e = 'move-node-to-workspace E'
+# alt-shift-a = 'move-node-to-workspace A'
+# alt-shift-b = 'move-node-to-workspace B'
+# alt-shift-c = 'move-node-to-workspace C'
+# alt-shift-d = 'move-node-to-workspace D'
+# alt-shift-e = 'move-node-to-workspace E'
 alt-shift-f = 'fullscreen'
-alt-shift-g = 'move-node-to-workspace G'
-alt-shift-i = 'move-node-to-workspace I'
-alt-shift-m = 'move-node-to-workspace M'
-alt-shift-n = 'move-node-to-workspace N'
-alt-shift-o = 'move-node-to-workspace O'
-alt-shift-p = 'move-node-to-workspace P'
-alt-shift-q = 'move-node-to-workspace Q'
-alt-shift-r = 'move-node-to-workspace R'
-alt-shift-s = 'move-node-to-workspace S'
-alt-shift-t = 'move-node-to-workspace T'
-alt-shift-u = 'move-node-to-workspace U'
-alt-shift-v = 'move-node-to-workspace V'
-alt-shift-w = 'move-node-to-workspace W'
-alt-shift-x = 'move-node-to-workspace X'
-alt-shift-y = 'move-node-to-workspace Y'
-alt-shift-z = 'move-node-to-workspace Z'
+# alt-shift-g = 'move-node-to-workspace G'
+# alt-shift-i = 'move-node-to-workspace I'
+# alt-shift-m = 'move-node-to-workspace M'
+# alt-shift-n = 'move-node-to-workspace N'
+# alt-shift-o = 'move-node-to-workspace O'
+# alt-shift-p = 'move-node-to-workspace P'
+# alt-shift-q = 'move-node-to-workspace Q'
+# alt-shift-r = 'move-node-to-workspace R'
+# alt-shift-s = 'move-node-to-workspace S'
+# alt-shift-t = 'move-node-to-workspace T'
+# alt-shift-u = 'move-node-to-workspace U'
+# alt-shift-v = 'move-node-to-workspace V'
+# alt-shift-w = 'move-node-to-workspace W'
+# alt-shift-x = 'move-node-to-workspace X'
+# alt-shift-y = 'move-node-to-workspace Y'
+# alt-shift-z = 'move-node-to-workspace Z'
 
 # [workspace-to-monitor-force-assignment]
 # 1 = 'main'
@@ -198,58 +207,9 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.rdc.macos'
-run = "move-node-to-workspace R"
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
-run = "move-node-to-workspace W"
-
-[[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
-run = "move-node-to-workspace Q"
-
-[[on-window-detected]]
-if.app-id = 'org.whispersystems.signal-desktop'
-run = "move-node-to-workspace Q"
-
-[[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = "move-node-to-workspace 5"
-
-[[on-window-detected]]
-if.app-id = 'com.apple.Safari'
-run = "move-node-to-workspace 1"
-
-[[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
-run = 'move-node-to-workspace 3'
-
-[[on-window-detected]]
-if.app-id = 'com.ninjarmm.ncplayer'
-run = "move-node-to-workspace S"
-
-# [[on-window-detected]]
-# if.app-id = 'com.apple.finder'
-# run = "layout floating"
-
 [[on-window-detected]]
 if.app-id = 'com.apple.ActivityMonitor'
 run = "layout floating"
-
-[[on-window-detected]]
-if.app-id = 'com.google.Chrome.app.lodlkdfmihgonocnmddehnfgiljnadcf'
-run = "move-node-to-workspace X"
-
-[[on-window-detected]]
-if.app-id = 'com.google.Chrome.app.hjlhbeffadgkonmpnblkfmhckmocohah'
-run = "move-node-to-workspace V"
-
-[[on-window-detected]]
-if.app-id = 'com.google.Chrome.app.agimnkijcaahngcdmfeangaknmldooml'
-run = "move-node-to-workspace V"
 
 [[on-window-detected]]
 if.app-id = 'com.codeweavers.CrossOver'
