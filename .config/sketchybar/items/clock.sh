@@ -8,8 +8,8 @@ sketchybar --add item clock right \
     icon.color="$COLOR" \
     icon="􀐬" \
     label.color="$COLOR" \
-    label.padding_right=5 \
-    label.width=78 \
+    label.padding_right=0 \
+    label.width=52 \
     align=center \
     background.height=26 \
     background.corner_radius="$CORNER_RADIUS" \

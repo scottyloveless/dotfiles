@@ -8,7 +8,8 @@ sketchybar --add item cpu right \
     icon.color="$COLOR" \
     icon.padding_left=10 \
     label.color="$COLOR" \
-    label.padding_right=10 \
+    label.padding_right=0 \
+    label.width=36 \
     background.height=26 \
     background.corner_radius="$CORNER_RADIUS" \
     background.padding_right=5 \
