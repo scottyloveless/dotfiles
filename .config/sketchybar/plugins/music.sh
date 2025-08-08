@@ -22,7 +22,7 @@ fi
 title=$(osascript -e 'tell application "Music" to get name of current track')
 artist=$(osascript -e 'tell application "Music" to get artist of current track')
 # ALBUM=$(osascript -e 'tell application "Music" to get album of current track')
-loved=$(osascript -l JavaScript -e "Application('Music').currentTrack().loved()")
+loved=$(osascript -l JavaScript -e "Application('Music').currentTrack().favorited()")
 if [[ $loved ]]; then
     icon="􀊸"
 fi

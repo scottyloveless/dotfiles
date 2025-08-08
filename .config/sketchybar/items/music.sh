@@ -1,9 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-COLOR="$GREEN"
+COLOR="$RED"
+
+sketchybar -m --add event song_update com.apple.iTunes.playerInfo
 
 sketchybar --add item music q \
     --set music \
+    --animate sin 10 \
     scroll_texts=on \
     icon=󰎆 \
     icon.color="$COLOR" \
