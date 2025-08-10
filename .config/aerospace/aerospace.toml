@@ -59,12 +59,12 @@ on-focus-changed = "move-mouse window-lazy-center"
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 14
-inner.vertical = 14
-outer.left = 14
-outer.bottom = 14
-outer.top = 14
-outer.right = 14
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 10
+outer.right = 10
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -72,7 +72,7 @@ outer.right = 14
 [mode.main.binding]
 cmd-h = []     # Disable "hide application"
 cmd-alt-h = [] # Disable "hide others"
-
+cmd-m = []
 # All possible keys:
 # - Letters.        a, b, c, ..., z
 # - Numbers.        0, 1, 2, ..., 9
@@ -102,6 +102,13 @@ alt-j = 'focus down'
 alt-k = 'focus up'
 alt-l = 'focus right'
 
+# Open new Safari tab
+alt-b = '''exec-and-forget osascript -e '
+tell application "Safari"
+    make new document at end of documents
+    activate
+end tell'
+'''
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
 alt-shift-j = 'move down'
