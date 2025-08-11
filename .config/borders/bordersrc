@@ -1,13 +1,13 @@
 #!/bin/bash
 
 options=(
-    style=round
-    width=6.0
-    hidpi=on
-    # active_color=0xffffc640
-    # inactive_color=0xffaabbcc
-    "active_color=gradient(top_left=0xffccffee,bottom_right=0xffccffee)"
-    # "inactive_color=gradient(top_left=0xff7ca1f2,bottom_right=0xff7ca1f2)"
+  style=round
+  width=4.0
+  hidpi=on
+  # active_color=0xffffc640
+  # inactive_color=0xffaabbcc
+  "active_color=gradient(top_left=0xffccffee,bottom_right=0xffccffee)"
+  # "inactive_color=gradient(top_left=0xff7ca1f2,bottom_right=0xff7ca1f2)"
 )
 
 borders "${options[@]}"

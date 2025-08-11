@@ -70,8 +70,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --color=always $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always $realpath'
 
 # Aliases
-alias ls='eza --color=always --icons=always'
-alias ll='eza --color=always --icons=always -l --git --git-repos'
+alias ls='eza --color=always --icons=always -l --git --git-repos -a'
+alias ll='eza --color=always --icons=always --git --git-repos -a'
 alias vim='nvim'
 alias c='clear'
 

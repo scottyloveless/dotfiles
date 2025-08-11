@@ -11,7 +11,7 @@ shell-integration-features = no-cursor
 unfocused-split-opacity = 0.9
 
 # ---- font ---- #
-font-size = 15
+font-size = 16
 #font-thicken = true
 font-family = IosevkaTerm Nerd Font Mono
 font-style = Medium
@@ -31,10 +31,11 @@ macos-titlebar-style = hidden
 
 # ---- theme ---- #
 #theme = tokyonight_moon
+#theme = nord
 theme = "/Users/mox/.config/ghostty/themes/tokyonight_moon.conf"
 
 # ---- background ----- #
-background-opacity = 0.7
+background-opacity = 0.8
 background-blur = true
 # background = 222222
 # background = 000126
@@ -45,6 +46,7 @@ background-blur = true
 # background = 011222
 # background = 020D19
 background = 1a1b26
+# background = 000000
 
 
 window-save-state = always
@@ -52,7 +54,7 @@ window-save-state = always
 
 quit-after-last-window-closed = true
 quick-terminal-animation-duration = 1
-window-padding-x = 10
-window-padding-y = 10
-#window-padding-balance = true
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
 confirm-close-surface = false
