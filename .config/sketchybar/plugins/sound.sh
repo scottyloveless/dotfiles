@@ -5,17 +5,17 @@ MUTED=$(osascript -e "output muted of (get volume settings)")
 
 audio_device="$(SwitchAudioSource -c)"
 
-if [[ "$audio_device" == *"AirPods Max"* ]]; then
-    ICON=""
+if [[ "$audio_device" == *"AirPods Max"* || "$audio_device" == *"LIGHTSPEED"* ]]; then
+  ICON=""
 elif [[ "$audio_device" == *"AirPods Pro"* ]]; then
-    ICON="󱡏"
+  ICON="󱡏"
 elif [[ "$audio_device" == *"Speakers"* ]]; then
-    ICON="󰓃"
+  ICON="󰓃"
 else
-    ICON=""
-    color="$RED"
+  ICON="󰓃"
+  color="$RED"
 fi
 
 sketchybar -m \
-    --set "$NAME" icon=$ICON \
-    --set "$NAME" label="$VOLUME%"
+  --set "$NAME" icon=$ICON \
+  --set "$NAME" label="$VOLUME%"
