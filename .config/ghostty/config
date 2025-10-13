@@ -1,7 +1,8 @@
 # ---- shell ---- #
 shell-integration = zsh
 mouse-hide-while-typing = true
-scrollback-limit = 10000
+mouse-hide-while-typing = true
+scrollback-limit = 100000
 
 # --- cursor ---- #
 cursor-style = block
@@ -11,18 +12,19 @@ shell-integration-features = no-cursor
 unfocused-split-opacity = 0.9
 
 # ---- font ---- #
-font-size = 16
+#font-family = ""
+font-size = 18
 #font-thicken = true
-font-family = IosevkaTerm Nerd Font Mono
-font-style = Medium
-font-style-bold = Bold
-font-style-italic = Italic
-font-style-bold-italic = Bold Italic
+#font-family = "MesloLGS Nerd Font"
+#font-family = "Iosevka Nerd Font Mono"
+#font-family = "CaskaydiaMono Nerd Font"
+#font-family = "JetBrains Mono"
+#font-style = Medium
+#font-style-bold = Bold
+#font-style-italic = Italic
+#font-style-bold-italic = Bold Italic
 
 clipboard-trim-trailing-spaces = true
-
-mouse-hide-while-typing = true
-scrollback-limit = 1000000
 
 # ---- macOS ---- #
 macos-non-native-fullscreen = false
@@ -35,8 +37,8 @@ macos-titlebar-style = hidden
 theme = "/Users/mox/.config/ghostty/themes/tokyonight_moon.conf"
 
 # ---- background ----- #
-background-opacity = 0.8
-background-blur = true
+#background-opacity = 0.9
+#background-blur = true
 # background = 222222
 # background = 000126
 # background = 011423
@@ -45,8 +47,9 @@ background-blur = true
 # background = 101720
 # background = 011222
 # background = 020D19
-background = 1a1b26
+# background = 1a1b26
 # background = 000000
+background = 222437
 
 
 window-save-state = always
@@ -54,7 +57,7 @@ window-save-state = always
 
 quit-after-last-window-closed = true
 quick-terminal-animation-duration = 1
-window-padding-x = 0
-window-padding-y = 0
+window-padding-x = 14
+window-padding-y = 12
 window-padding-balance = true
 confirm-close-surface = false

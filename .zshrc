@@ -70,7 +70,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --color=always $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always $realpath'
 
 # Aliases
-alias ls='eza --color=always --icons=always -l --git --git-repos -a'
+alias ls='eza --color=always --icons=always -l -a'
 alias ll='eza --color=always --icons=always --git --git-repos -a'
 alias vim='nvim'
 alias c='clear'
@@ -115,7 +115,9 @@ if [ -f '/Users/mox/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/U
 
 # ~/.zshrc
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/jandedobbeleer.json)"
 fi
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
+. "$HOME/.local/share/../bin/env"
