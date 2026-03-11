@@ -31,6 +31,7 @@ style = 'plain'
 foreground = 'p:grey'
 background = 'transparent'
 template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+#template = ' {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <cyan>{{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}'
 
 [blocks.segments.properties]
 branch_icon = ''
@@ -40,6 +41,14 @@ fetch_status = true
 [[blocks]]
 type = 'rprompt'
 overflow = 'hidden'
+
+[[blocks.segments]]
+type = 'python'
+style = 'powerline'
+display_mode = 'environment'
+foreground = 'magenta'
+background = 'transparent'
+template = '{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}  '
 
 [[blocks.segments]]
 type = 'executiontime'

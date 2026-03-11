@@ -70,7 +70,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --color=always $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always $realpath'
 
 # Aliases
-alias ls='eza --color=always --icons=always -l -a'
+alias ls='eza --color=always --icons=always -l --group-directories-first'
 alias ll='eza --color=always --icons=always --git --git-repos -a'
 alias vim='nvim'
 alias c='clear'
@@ -107,6 +107,12 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=spinner:#ff007c \
 "
 
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
+. "$HOME/.local/share/../bin/env"
+
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/mox/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mox/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -115,9 +121,7 @@ if [ -f '/Users/mox/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/U
 
 # ~/.zshrc
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/jandedobbeleer.json)"
+  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 fi
 
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
-. "$HOME/.local/share/../bin/env"
