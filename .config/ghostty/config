@@ -3,6 +3,7 @@ shell-integration = zsh
 mouse-hide-while-typing = true
 mouse-hide-while-typing = true
 scrollback-limit = 100000
+shell-integration = none
 
 # --- cursor ---- #
 cursor-style = block
@@ -38,7 +39,7 @@ theme = "TokyoNight Moon"
 #theme = "/Users/mox/.config/ghostty/themes/tokyonight_moon.conf"
 
 # ---- background ----- #
-background-opacity = 0.95
+background-opacity = 0.80
 background-blur = true
 # background = 222222
 # background = 000126
@@ -62,3 +63,5 @@ window-padding-x = 6
 window-padding-y = 6
 window-padding-balance = true
 confirm-close-surface = false
+
+async-backend = epoll

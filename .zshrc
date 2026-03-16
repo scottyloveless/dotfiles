@@ -1,11 +1,16 @@
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
 export EZA_CONFIG_DIR="$HOME/.config/eza/"
 
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  # If you're using macOS, you'll want this enabled
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # Your macOS-specific configurations here
+    # Example: alias brew='/opt/homebrew/bin/brew'
   eval "$(/opt/homebrew/bin/brew shellenv)"
+  export XDG_CONFIG_HOME="$HOME/.config"
+  export XDG_DATA_HOME="$HOME/.local/share"
+  . "$HOME/.local/share/../bin/env"
+  export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 fi
+
+export PATH=$PATH:/home/mox/.local/bin
 
 # ---- Go ----
 export GOPATH=$HOME/go
@@ -107,21 +112,12 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=spinner:#ff007c \
 "
 
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/usr/bin/Hyprland:$PATH"
 
-. "$HOME/.local/share/../bin/env"
 
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/mox/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mox/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/mox/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mox/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 # ~/.zshrc
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 fi
-
-
