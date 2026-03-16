@@ -14,7 +14,7 @@ unfocused-split-opacity = 0.9
 
 # ---- font ---- #
 #font-family = ""
-font-size = 14
+font-size = 12
 font-thicken = true
 #font-family = "MesloLGS Nerd Font"
 #font-family = "Iosevka Nerd Font Mono"
