@@ -8,6 +8,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export XDG_DATA_HOME="$HOME/.local/share"
   . "$HOME/.local/share/../bin/env"
   export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+  export PATH="/opt/homebrew/opt/sqlfluff/bin/:$PATH"
+
   export PATH=$PATH:~/.local/bin/
 fi
 
@@ -80,6 +82,7 @@ alias ls='eza --color=always --icons=always -l -a --group-directories-first'
 alias ll='eza --color=always --icons=always --git --git-repos -a'
 alias vim='nvim'
 alias c='clear'
+alias y='yazi'
 
 # Neovim
 export EDITOR=nvim
@@ -122,3 +125,4 @@ export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 fi
+export PATH="/opt/homebrew/opt/imagemagick-full/bin:$PATH"
