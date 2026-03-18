@@ -8,6 +8,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export XDG_DATA_HOME="$HOME/.local/share"
   . "$HOME/.local/share/../bin/env"
   export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+  export PATH=$PATH:~/.local/bin/
 fi
 
 export PATH=$PATH:/home/mox/.local/bin
