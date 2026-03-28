@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
+SPACE_ICONS=("" "2" "3" "4" "5" "E" "Q" "R" "W")
 
 sketchybar --add item spacer.1 left \
     --set spacer.1 background.drawing=off \
@@ -57,11 +57,11 @@ sketchybar --add bracket spaces '/space.*/' \
     background.height=26 \
     background.drawing=on
 
-sketchybar --add item separator left \
-    --set separator icon= \
-    icon.font="$FONT:Regular:16.0" \
-    background.padding_left=26 \
-    background.padding_right=15 \
-    label.drawing=off \
-    associated_display=active \
-    icon.color="$YELLOW"
+# sketchybar --add item separator left \
+#     --set separator icon= \
+#     icon.font="$FONT:Regular:16.0" \
+#     background.padding_left=26 \
+#     background.padding_right=15 \
+#     label.drawing=off \
+#     associated_display=active \
+#     icon.color="$YELLOW"

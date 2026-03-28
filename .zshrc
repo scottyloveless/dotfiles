@@ -10,10 +10,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/opt/homebrew/opt/curl/bin:$PATH"
   export PATH="/opt/homebrew/opt/sqlfluff/bin/:$PATH"
 
-  export PATH=$PATH:~/.local/bin/
+  export PATH=$PATH:$HOME/.local/bin/
+export PATH=$PATH:$HOME/.local/share/nvim/mason/staging/nil/bin
 fi
 
-export PATH=$PATH:/home/mox/.local/bin
+export PATH=$PATH:$HOME/.local/bin
 
 # ---- Go ----
 export GOPATH=$HOME/go

@@ -3,23 +3,22 @@ shell-integration = zsh
 mouse-hide-while-typing = true
 mouse-hide-while-typing = true
 scrollback-limit = 100000
-shell-integration = none
 
 # --- cursor ---- #
 cursor-style = block
 shell-integration-features = no-cursor
 
 # ---- splits ---- #
-unfocused-split-opacity = 0.9
+unfocused-split-opacity = 0.95
 
 # ---- font ---- #
-#font-family = ""
-font-size = 12
-font-thicken = true
+font-family = ""
+font-size = 16
+#font-thicken = true
 #font-family = "MesloLGS Nerd Font"
 #font-family = "Iosevka Nerd Font Mono"
 #font-family = "CaskaydiaMono Nerd Font"
-#font-family = "JetBrains Mono"
+font-family = "JetBrainsMono Nerd Font"
 #font-style = Medium
 #font-style-bold = Bold
 #font-style-italic = Italic
@@ -39,7 +38,7 @@ theme = "TokyoNight Moon"
 #theme = "/Users/mox/.config/ghostty/themes/tokyonight_moon.conf"
 
 # ---- background ----- #
-background-opacity = 0.80
+background-opacity = 0.9
 background-blur = true
 # background = 222222
 # background = 000126
@@ -50,7 +49,7 @@ background-blur = true
 # background = 011222
 # background = 020D19
 # background = 1a1b26
-#background = 000000
+background = 000000
 #background = 222437
 
 
@@ -59,8 +58,8 @@ window-save-state = always
 
 quit-after-last-window-closed = true
 quick-terminal-animation-duration = 1
-window-padding-x = 6
-window-padding-y = 6
+window-padding-x = 12
+window-padding-y = 12
 window-padding-balance = true
 confirm-close-surface = false
 
