@@ -4,17 +4,18 @@ source "$HOME/.config/sketchybar/variables.sh" # Loads all defined colors
 
 # General bar and defaults
 
-sketchybar --bar height=32 \
-    color="0x00000000" \
+# corner_radius="$CORNER_RADIUS" \
+# blur_radius=20\
+# y_offset=2 \
+sketchybar --bar \
+    height=32 \
+    color="0xff000000" \
     shadow="$SHADOW" \
     position=top \
     sticky=on \
-    padding_right=0 \
-    padding_left=3 \
-    corner_radius="$CORNER_RADIUS" \
-    y_offset=5 \
-    margin=14 \
-    blur_radius=20 \
+    padding_right=2 \
+    padding_left=2 \
+    margin=0 \
     notch_width=200 \
     --default updates=when_shown \
     icon.font="$FONT:Bold:13.0" \
