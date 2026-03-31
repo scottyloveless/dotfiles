@@ -13,17 +13,8 @@ shell-integration-features = no-cursor
 
 # ---- font ---- #
 # font-family = ""
-font-size = 12
-#font-thicken = true
-#font-family = "MesloLGS Nerd Font"
-#font-family = "Iosevka Nerd Font Mono"
-#font-family = "CaskaydiaMono Nerd Font"
-# font-family = "JetBrainsMono Nerd Font"
-#font-style = Medium
-#font-style-bold = Bold
-#font-style-italic = Italic
-#font-style-bold-italic = Bold Italic
-
+font-size = 16
+font-thicken = true
 clipboard-trim-trailing-spaces = true
 
 # ---- macOS ---- #
@@ -33,7 +24,7 @@ macos-titlebar-style = hidden
 
 # ---- theme ---- #
 #theme = tokyonight_moon
-theme = noctalia
+theme = TokyoNight Moon
 #theme = nord
 #theme = "/Users/mox/.config/ghostty/themes/tokyonight_moon.conf"
 
