@@ -1,38 +1,25 @@
-# ---- shell ---- #
+# vim: ft=ghostty
 shell-integration = zsh
-mouse-hide-while-typing = true
 mouse-hide-while-typing = true
 scrollback-limit = 100000
 
-# --- cursor ---- #
 cursor-style = block
 shell-integration-features = no-cursor
 
-# ---- splits ---- #
-# unfocused-split-opacity = 0.95
-
-# ---- font ---- #
-# font-family = ""
 font-size = 16
 font-thicken = true
 clipboard-trim-trailing-spaces = true
 
-# ---- macOS ---- #
-# macos-non-native-fullscreen = true
 macos-titlebar-style = hidden
-# macos-titlebar-style = transparent
+background-blur = macos-glass-regular
 
-# ---- theme ---- #
-#theme = tokyonight_moon
 theme = TokyoNight Moon
-#theme = nord
-#theme = "/Users/mox/.config/ghostty/themes/tokyonight_moon.conf"
 
-# ---- background ----- #
-background-opacity = 0.5
+background-opacity = 0.0
 # background-opacity-cells = true
 # background-blur = macos-glass-clear
 background-blur = macos-glass-regular
+background-blur = true
 # background = 222222
 # background = 000126
 # background = 011423
@@ -46,15 +33,14 @@ background-blur = macos-glass-regular
 # background = 222437
 # background = 00141A
 ### tokyonight night bg
-# background = 1A1B26 
+background = 1A1B26
 
-window-save-state = always
-
-quit-after-last-window-closed = true
-quick-terminal-animation-duration = 1
 window-padding-x = 20
 window-padding-y = 10
+window-save-state = always
 window-padding-balance = true
+quit-after-last-window-closed = true
+quick-terminal-animation-duration = 1
 confirm-close-surface = false
 
 async-backend = auto
