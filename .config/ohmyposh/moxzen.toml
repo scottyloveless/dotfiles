@@ -1,5 +1,5 @@
 #:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
-console_title_template = '\n\n{{ .Shell }} in {{ .Folder }}'
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
 version = 3
 final_space = true
 
@@ -17,8 +17,8 @@ newline = true
 [[blocks.segments]]
 type = 'path'
 style = 'plain'
-background = 'transparent'
-foreground = 'blue'
+foreground = 'transparent'
+background = 'blue'
 template = '{{ .Path }}'
 
 [blocks.segments.properties]
@@ -29,14 +29,12 @@ type = 'git'
 style = 'plain'
 foreground = 'p:grey'
 background = 'transparent'
-template = '  {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
 
 [blocks.segments.properties]
 branch_icon = ''
 commit_icon = '@'
 fetch_status = true
-display_status = true
-display_upstream_icon = true
 
 [[blocks]]
 type = 'rprompt'
