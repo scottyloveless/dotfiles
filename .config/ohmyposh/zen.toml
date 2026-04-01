@@ -1,7 +1,7 @@
-#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
-console_title_template = '\n\n{{ .Shell }} in {{ .Folder }}'
-version = 3
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
 final_space = true
+version = 4
+console_title_template = '\n\n{{ .Shell }} in {{ .Folder }}'
 
 [upgrade]
 source = 'cdn'
@@ -13,6 +13,7 @@ notice = false
 type = 'prompt'
 alignment = 'left'
 newline = true
+
 
 [[blocks.segments]]
 type = 'path'
