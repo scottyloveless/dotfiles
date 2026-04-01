@@ -135,6 +135,6 @@ export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 
 # ~/.zshrc
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/moxzen.toml)"
 fi
 export PATH="/opt/homebrew/opt/imagemagick-full/bin:$PATH"

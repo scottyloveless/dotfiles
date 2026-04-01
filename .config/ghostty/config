@@ -6,6 +6,7 @@ scrollback-limit = 100000
 cursor-style = block
 shell-integration-features = no-cursor
 
+font-family = "JetBrainsMono Nerd Font"
 font-size = 16
 font-thicken = true
 clipboard-trim-trailing-spaces = true
