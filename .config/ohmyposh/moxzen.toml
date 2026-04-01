@@ -35,39 +35,45 @@ newline = true
 
 [[blocks.segments]]
 type = 'path'
-style = 'diamond'
-powerline_symbol = ''
+style = 'plain'
 foreground = '#7aa2f7'
-background = '#222436'
-template = ' {{ .Path }}'
+background = 'transparent'
+template = '{{ .Path }} '
 
 [blocks.segments.properties]
 style = 'full'
 
 [[blocks.segments]]
 type = 'git'
-style = 'powerline'
-powerline_symbol = ''
+style = 'plain'
+# leading_diamond = ""
 foreground = '#9ece6a'
-background = '#414868'
+background = 'transparent'
 foreground_templates = [
     '{{ if or (.Working.Changed) (.Staging.Changed) }}#ff9e64{{ end }}',
     '{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}',
     '{{ if gt .Ahead 0 }}#B388FF{{ end }}',
     '{{ if gt .Behind 0 }}#B388FB{{ end }}',
 ]
-template = ' {{ .HEAD }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
+template = '{{ .HEAD }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}'
 
 [blocks.segments.options]
 fetch_status = true
 fetch_upstream_icon = false
 display_status = true
 branch_icon = ''
-# source = 'cli'
+source = 'cli'
 
 [[blocks]]
 type = 'rprompt'
 overflow = 'hidden'
+
+# [[blocks.segments]]
+# type = 'time'
+# style = 'plain'
+#
+# [blocks.segments.options]
+# time_format = "3:04 PM"
 
 [[blocks.segments]]
 type = 'python'
