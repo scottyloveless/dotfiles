@@ -36,7 +36,7 @@ background-blur = true
 ### tokyonight night bg
 background = 1A1B26
 
-window-padding-x = 20
+window-padding-x = 10
 window-padding-y = 10
 window-save-state = always
 window-padding-balance = true

@@ -14,14 +14,12 @@ type = 'prompt'
 alignment = 'left'
 newline = true
 
-# [[blocks.segments]]
-# type = 'os'
-# style = 'powerline'
-# # powerline_symbol = ''
-# # leading_powerline_symbol = ''
-# foreground = 'white'
-# background = '#1a1b26'
-# template = ' {{ .Icon }} '
+[[blocks.segments]]
+type = 'os'
+style = 'plain'
+foreground = '#86e1fc'
+background = 'transparent'
+template = '{{ .Icon }} '
 #
 # [[blocks.segments]]
 # type = 'session'
@@ -38,7 +36,7 @@ type = 'path'
 style = 'plain'
 foreground = '#7aa2f7'
 background = 'transparent'
-template = '{{ .Path }} '
+template = '{{ .Path }}'
 
 [blocks.segments.properties]
 style = 'full'
