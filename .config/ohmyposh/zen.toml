@@ -1,5 +1,4 @@
 #:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
-
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
 version = 3
 final_space = true
@@ -47,7 +46,7 @@ overflow = 'hidden'
 type = 'python'
 style = 'powerline'
 display_mode = 'environment'
-foreground = 'magenta'
+foreground = 'pink'
 background = 'transparent'
 template = '{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}  '
 

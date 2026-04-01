@@ -1,2 +1,5 @@
 [mgr]
-show_hidden = true
+show_hidden = false
+
+# [opener]
+# hide_patterns = [".DS_Store"]
