@@ -6,21 +6,20 @@ scrollback-limit = 100000
 cursor-style = block
 shell-integration-features = no-cursor
 
-font-family = "JetBrainsMono Nerd Font"
+# font-family = "JetBrainsMono Nerd Font"
 font-size = 16
 font-thicken = true
 clipboard-trim-trailing-spaces = true
 
 macos-titlebar-style = hidden
-background-blur = macos-glass-regular
 
-theme = TokyoNight Moon
+theme = TokyoNight Night
 
-background-opacity = 0.0
+# background-opacity = 0.0
 # background-opacity-cells = true
 # background-blur = macos-glass-clear
-background-blur = macos-glass-regular
-background-blur = true
+# background-blur = macos-glass-regular
+# background-blur = true
 # background = 222222
 # background = 000126
 # background = 011423
@@ -36,10 +35,11 @@ background-blur = true
 ### tokyonight night bg
 background = 1A1B26
 
-window-padding-x = 10
-window-padding-y = 10
+window-padding-x = 12
+window-padding-y = 12
+window-padding-color = background
 window-save-state = always
-window-padding-balance = true
+# window-padding-balance = true
 quit-after-last-window-closed = true
 quick-terminal-animation-duration = 1
 confirm-close-surface = false

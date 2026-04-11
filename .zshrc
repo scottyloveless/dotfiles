@@ -1,17 +1,21 @@
 export EZA_CONFIG_DIR="$HOME/.config/eza/"
 
+
+# os specific - mac
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    # Your macOS-specific configurations here
-    # Example: alias brew='/opt/homebrew/bin/brew'
   eval "$(/opt/homebrew/bin/brew shellenv)"
   export XDG_CONFIG_HOME="$HOME/.config"
   export XDG_DATA_HOME="$HOME/.local/share"
   . "$HOME/.local/share/../bin/env"
   export PATH="/opt/homebrew/opt/curl/bin:$PATH"
   export PATH="/opt/homebrew/opt/sqlfluff/bin/:$PATH"
+  export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+  export PATH=$PATH:$HOME/.local/share/nvim/mason/staging/nil/bin
+fi
 
-  export PATH=$PATH:$HOME/.local/bin/
-export PATH=$PATH:$HOME/.local/share/nvim/mason/staging/nil/bin
+# os specific - linux
+if [[ "$OSTYPE" == linux* ]]; then
+  export PATH="/usr/bin/Hyprland:$PATH"
 fi
 
 export PATH=$PATH:$HOME/.local/bin
@@ -32,23 +36,31 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
+# immediate plugins
 zinit light zsh-users/zsh-completions
+
+# async plugins
+zinit ice wait lucid 
+zinit light zsh-users/zsh-syntax-highlighting
+
+zinit ice wait lucid
 zinit light zsh-users/zsh-autosuggestions
 
-# Add in snippets
-zinit snippet OMZP::aws
-zinit snippet OMZP::command-not-found
-zinit snippet OMZP::docker
-zinit snippet OMZP::git
-zinit snippet OMZP::1password
-zinit snippet OMZP::brew
+# # Add in snippets
+# zinit snippet OMZP::aws
+# zinit snippet OMZP::command-not-found
+# zinit snippet OMZP::docker
+# zinit snippet OMZP::git
+# zinit snippet OMZP::1password
+# zinit snippet OMZP::brew
 
-
-# Load completions
-autoload -Uz compinit && compinit
-
+# Load compinit once a day
+autoload -Uz compinit
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
 # Load After compinit
 zinit light Aloxaf/fzf-tab
 zinit cdreplay -q
@@ -104,9 +116,13 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 # postgres 
-export PSQL_DIR=/opt/homebrew/Cellar/postgresql@15/15.13/bin
+export PSQL_DIR=/opt/homebrew/Cellar/postgresql@17/17.9/bin
 export PATH="$PSQL_DIR:$PATH"
 
+# imagemagick-full
+export PATH="/opt/homebrew/opt/imagemagick-full/bin:$PATH"
+
+# tokyonight theme for fzf
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
   --info=inline-right \
@@ -127,14 +143,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=spinner:#ff007c \
 "
 
-
-export PATH="/usr/bin/Hyprland:$PATH"
-
-
-export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
-
 # ~/.zshrc
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/moxzen.toml)"
 fi
-export PATH="/opt/homebrew/opt/imagemagick-full/bin:$PATH"

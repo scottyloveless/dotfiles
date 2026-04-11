@@ -7,7 +7,7 @@
 # - animation_duration: seconds per animation (>= 0.0, typical 0.15–0.35)
 # - animation_fps: frames per second (0.0 = display refresh rate). 60–120 recommended.
 #   ease_in_circ, ease_out_circ, ease_in_out_circ
-animate = true
+animate = false
 animation_duration = 0.15
 animation_fps = 0.0
 
@@ -34,7 +34,7 @@ mouse_hides_on_focus = true
 # Examples:
 #   "com.apple.dock", "com.apple.systemuiserver", "com.apple.SecurityAgent",
 #   "com.raycast.macos", "com.apple.Spotlight"
-auto_focus_blacklist = ["com.raycast.macos", "com.apple.Spotlight"]
+auto_focus_blacklist = []
 
 # Run commands on start
 #
@@ -96,7 +96,7 @@ column_width_ratio = 0.7
 min_column_width_ratio = 0.3
 max_column_width_ratio = 0.9
 # Alignment for the focused column: "left", "center", or "right"
-alignment = "right"
+alignment = "center"
 # Horizontal focus behavior:
 # - "niri": reveal columns only when needed based on navigation direction
 # 			(disrespects alignment setting above)
@@ -112,7 +112,7 @@ enabled = false
 # Invert horizontal direction (swap left/right)
 invert_horizontal = false
 # Number of fingers required for gesture
-fingers = 4
+fingers = 3
 # If true, scrolling past the end of the strip will trigger a workspace switch
 propagate_to_workspace_swipe = false
 
@@ -161,7 +161,7 @@ vertical = 8
 # vertical = 8
 [settings.ui.menu_bar]
 # enable menu bar workspace indicators
-enabled = true
+enabled = false
 # if enabled, it will show all workspaces including empty ones. disabled because this
 # tends to take up too much room in the menubar and then is auto hidden by macos
 show_empty = false
@@ -196,7 +196,7 @@ fade_duration_ms = 180.0
 # Trackpad gestures
 [settings.gestures]
 # Enable horizontal swipes to switch virtual workspaces
-enabled = true
+enabled = false
 # Invert horizontal direction (swap next/prev)
 invert_horizontal_swipe = false
 # Maximum vertical travel allowed for the horizontal swipe to register.
@@ -205,7 +205,7 @@ swipe_vertical_tolerance = 0.4
 # Skip empty workspaces when swiping
 skip_empty = true
 # Number of fingers required for swipe
-fingers = 4
+fingers = 3
 # Normalized horizontal distance (0..1) to trigger swipe for NSTouch-based detection
 distance_pct = 0.08
 # Haptic feedback on commit (generic | alignment | level_change)
@@ -231,7 +231,7 @@ drag_swap_fraction = 0.3
 #   that's already active, it will switch to the last workspace instead
 # - reapply_app_rules_on_title_change: if true, app rules are re-evaluated when a window's title changes
 enabled = true
-default_workspace_count = 4
+default_workspace_count = 8
 auto_assign_windows = true
 preserve_focus_per_workspace = true
 workspace_auto_back_and_forth = false
@@ -255,7 +255,7 @@ workspace_rules = []
 # Workspace names (indexed order). If fewer than default_workspace_count are provided,
 # remaining workspaces are named "Workspace X".
 # Do not provide more names than default_workspace_count.
-workspace_names = ["1", "2", "3", "4"]
+workspace_names = ["1", "2", "3", "4", "Q", "W", "E", "R"]
 
 # App rules (automatic assignment)
 # Define rules that match new windows and set properties (workspace, floating, etc).
@@ -388,11 +388,20 @@ comb1 = "Alt + Shift"
 "Alt + 2" = { switch_to_workspace = 1 }
 "Alt + 3" = { switch_to_workspace = 2 }
 "Alt + 4" = { switch_to_workspace = 3 }
+"Alt + Q" = { switch_to_workspace = 4 }
+"Alt + W" = { switch_to_workspace = 5 }
+"Alt + E" = { switch_to_workspace = 6 }
+"Alt + R" = { switch_to_workspace = 7 }
+
 
 "comb1 + 1" = { move_window_to_workspace = 0 }
 "comb1 + 2" = { move_window_to_workspace = 1 }
 "comb1 + 3" = { move_window_to_workspace = 2 }
 "comb1 + 4" = { move_window_to_workspace = 3 }
+"comb1 + Q" = { move_window_to_workspace = 4 }
+"comb1 + W" = { move_window_to_workspace = 5 }
+"comb1 + E" = { move_window_to_workspace = 6 }
+"comb1 + R" = { move_window_to_workspace = 7 }
 
 "Alt + Tab" = "switch_to_last_workspace"
 
